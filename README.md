@@ -20,6 +20,10 @@ An example of running a basic WordPress site on the Appfog PaaS platform
 Opcache is enabled by default. To disable it, edit the `/.bp-config/php/php.ini` file, setting `opcache.enable=0`.
     
 # [Nginx FAST CGI cache](http://nginx.org/en/docs/http/ngx_http_fastcgi_module.html#fastcgi_cache)
-FAST CGI cache in Nginx is enabled by default for better performance. To disable it, edit the `/.bp-config/nginx/wordpress-single.conf` file.  Comment out line 25 so it looks like this: `#include fastcgi.conf;`
+FAST CGI cache in Nginx is enabled by default for better performance. 
+
+A custom HTTP header has been included, called "X-Cache", that indicates cache HIT and MISS to check whether items are being cached successfully.
+
+To disable the cache, edit the `/.bp-config/nginx/wordpress-single.conf` file.  Comment out line 25 so it looks like this: `#include fastcgi.conf;`
 
 NOTE:  If you choose to leave FAST CGI cache enabled, you should be aware that the `fastcgi_cache_purge` directive is not currently supported. This is because the default version of Nginx that comes with the Cloud Foundry PHP buildpack does not currently include the fastcgi_cache_purge module. If/when this module is added, you can enable purging by uncommenting lines 29-31 in `/.bp-config/nginx/wordpress-single.conf`
