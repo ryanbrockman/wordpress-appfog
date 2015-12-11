@@ -4,7 +4,6 @@ gitignore.txt
 cfignore.txt
 sitemap.xml
 sitemap.xml.gz
-wp-config.php
 wp/
 wp-content/advanced-cache.php
 wp-content/backup-db/
