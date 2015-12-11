@@ -1,0 +1,12 @@
+---
+applications:
+- name: wordpress-appfog
+  buildpack: https://github.com/cloudfoundry/php-buildpack.git
+  instances: 2
+  memory: 256M
+
+services:
+- wp_database
+
+env:
+    WP_ENV: dev

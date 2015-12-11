@@ -1,0 +1,5 @@
+{
+  "WEB_SERVER": "nginx",
+  "PHP_EXTENSIONS": ["mbstring", "mysqli", "mcrypt", "gd", "zip", "curl", "openssl", "sockets"],
+  "ZEND_EXTENSIONS": ["opcache"]
+}
