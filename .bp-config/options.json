@@ -1,5 +1,8 @@
 {
   "WEB_SERVER": "nginx",
+  "NGINX_VERSION": "{NGINX_19_LATEST}",
+  "PHP_VM": "php",
+  "PHP_VERSION": "{PHP_56_LATEST}",
   "PHP_EXTENSIONS": ["mbstring", "mysqli", "mcrypt", "gd", "zip", "curl", "openssl", "sockets"],
   "ZEND_EXTENSIONS": ["opcache"]
 }
